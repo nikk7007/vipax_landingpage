@@ -1,0 +1,66 @@
+/* ─────────────────────────────────────────
+   VIPAX · Manifesto
+   Citação editorial de abertura em grande
+   tipografia itálica, com parallax no fundo
+───────────────────────────────────────── */
+
+.manifesto {
+    background: var(--dark);
+    padding: 9rem 2rem 8rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Caractere decorativo de fundo em parallax */
+.manifesto-bg-char {
+    position: absolute;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 50vw;
+    color: rgba(200,150,62,0.025);
+    top: -12vw; left: -3vw;
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+    font-style: italic;
+}
+
+.manifesto-inner {
+    max-width: 840px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Label com linha decorativa à esquerda */
+.pill-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 2.2rem;
+}
+
+.pill-label::before {
+    content: '';
+    display: block;
+    width: 44px;
+    height: 1px;
+    background: var(--amber);
+}
+
+.manifesto-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.5rem, 3.2vw, 2.35rem);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--cream);
+}
+
+.manifesto-quote mark {
+    background: none;
+    color: var(--amber-light);
+    font-style: normal;
+}

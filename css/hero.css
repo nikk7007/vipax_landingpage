@@ -1,0 +1,136 @@
+/* ─────────────────────────────────────────
+   VIPAX · Hero
+   Tela cheia com título esculpido, partículas
+   e ornamento decorativo central
+───────────────────────────────────────── */
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--deep);
+}
+
+/* Camadas de atmosfera — luz filtrada pela copa */
+.hero-atmosphere {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 65% 55% at 50% 35%, rgba(61,94,52,0.16) 0%, transparent 65%),
+        radial-gradient(ellipse 35% 45% at 18% 75%, rgba(47,92,85,0.10) 0%, transparent 55%),
+        radial-gradient(ellipse 45% 38% at 82% 18%, rgba(200,150,62,0.07) 0%, transparent 50%),
+        radial-gradient(ellipse 80% 40% at 50% 100%, rgba(6,13,7,0.95) 0%, transparent 70%);
+}
+
+/* Canvas de partículas */
+#hero-canvas {
+    position: absolute;
+    inset: 0;
+}
+
+.hero-body {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    /* padding-bottom reserva espaço para o .hero-scroll absoluto na base */
+    padding: 2rem 2rem 9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-eyebrow {
+    font-family: 'Lora', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 2.8rem;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.4s forwards;
+}
+
+.hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(5.5rem, 19vw, 17rem);
+    font-weight: 300;
+    letter-spacing: 0.22em;
+    line-height: 1;
+    color: var(--cream);
+    margin-bottom: 0;
+    opacity: 0;
+    animation: titleBloom 1.6s cubic-bezier(0.16,1,0.3,1) 0.7s forwards;
+}
+
+/* Ornamento: linha — losango — linha */
+.hero-ornament {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    margin: 1.8rem 0;
+    width: 100%;
+    max-width: 480px;
+    opacity: 0;
+    animation: fadeIn 1s ease 1.6s forwards;
+}
+
+.hero-ornament-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(200,150,62,0.5));
+}
+
+.hero-ornament-line:last-child {
+    background: linear-gradient(to left, transparent, rgba(200,150,62,0.5));
+}
+
+.hero-ornament-diamond {
+    width: 6px;
+    height: 6px;
+    background: var(--amber);
+    transform: rotate(45deg);
+    flex-shrink: 0;
+}
+
+.hero-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.05rem, 2.4vw, 1.5rem);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--cream-70);
+    line-height: 1.55;
+    opacity: 0;
+    animation: fadeUp 1s ease 1.8s forwards;
+}
+
+/* Indicador de scroll na base do hero */
+.hero-scroll {
+    position: absolute;
+    bottom: 2.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    opacity: 0;
+    animation: fadeIn 1s ease 2.4s forwards;
+}
+
+.hero-scroll-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    color: rgba(240,232,208,0.3);
+}
+
+.hero-scroll-line {
+    width: 1px;
+    height: 52px;
+    background: linear-gradient(to bottom, rgba(200,150,62,0.65), transparent);
+    animation: breathLine 2.2s ease infinite;
+}

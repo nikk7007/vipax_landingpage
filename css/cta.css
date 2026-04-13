@@ -1,0 +1,103 @@
+/* ─────────────────────────────────────────
+   VIPAX · CTA (Chamada para Ação)
+   Taglines em destaque + botões primário e ghost
+───────────────────────────────────────── */
+
+.cta-section {
+    background: var(--deep);
+    padding: 10rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 80% 60% at 50% 50%, rgba(61,94,52,0.10) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 40% at 50% 100%, rgba(200,150,62,0.07) 0%, transparent 60%);
+}
+
+.cta-inner {
+    position: relative;
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+.cta-taglines {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 4.2vw, 3.4rem);
+    font-weight: 300;
+    line-height: 1.55;
+    color: var(--cream);
+    margin-bottom: 3.5rem;
+}
+
+.cta-taglines span { display: block; }
+.cta-taglines .accent { font-style: italic; color: var(--amber-light); }
+.cta-taglines .bold   { font-weight: 500; }
+
+.cta-btn-wrap {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Estilos base compartilhados pelos dois botões */
+.btn-primary,
+.btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.95rem 2.8rem;
+    font-family: 'Lora', serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: none;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s ease;
+}
+
+/* Botão primário — fundo âmbar sólido */
+.btn-primary {
+    background: var(--amber);
+    color: var(--deep);
+    border: 1px solid var(--amber);
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--amber-light);
+    transform: translateX(-101%);
+    transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+
+.btn-primary:hover::before { transform: translateX(0); }
+.btn-primary span { position: relative; z-index: 1; }
+
+/* Botão ghost — borda transparente */
+.btn-ghost {
+    background: transparent;
+    color: var(--cream);
+    border: 1px solid rgba(240,232,208,0.25);
+}
+
+.btn-ghost::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--cream-08);
+    transform: translateX(-101%);
+    transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+
+.btn-ghost:hover::before { transform: translateX(0); }
+.btn-ghost span { position: relative; z-index: 1; }

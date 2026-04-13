@@ -1,0 +1,28 @@
+/* ─────────────────────────────────────────
+   VIPAX · Cursor Personalizado
+   Ponto sólido âmbar + anel suave com inércia
+───────────────────────────────────────── */
+
+#cur-dot {
+    position: fixed;
+    width: 7px;
+    height: 7px;
+    background: var(--amber);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.12s ease, opacity 0.3s ease;
+}
+
+#cur-ring {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(200,150,62,0.45);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+}

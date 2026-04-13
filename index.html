@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIPAX — Autoconhecimento com as Próprias Mãos</title>
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/cursor.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/manifesto.css">
+    <link rel="stylesheet" href="css/offerings.css">
+    <link rel="stylesheet" href="css/immersion.css">
+    <link rel="stylesheet" href="css/pullquote.css">
+    <link rel="stylesheet" href="css/cta.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/mobile-menu.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- Cursor personalizado -->
+    <div id="cur-dot"></div>
+    <div id="cur-ring"></div>
+
+    <!-- ── NAVEGAÇÃO ───────────────────────────────── -->
+    <nav id="main-nav">
+        <a href="#" class="nav-logo">VIPAX</a>
+        <ul class="nav-links">
+            <li><a href="#manifesto">Proposta</a></li>
+            <li><a href="#offerings">Vivências</a></li>
+            <li><a href="#immersion">A Jornada</a></li>
+            <li><a href="#cta">Participe</a></li>
+        </ul>
+        <button id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- ── MENU MOBILE (overlay) ────────────────────── -->
+    <div id="mobile-menu" role="dialog" aria-label="Menu de navegação">
+        <a href="#manifesto">Proposta</a>
+        <a href="#offerings">Vivências</a>
+        <a href="#immersion">A Jornada</a>
+        <a href="#cta">Participe</a>
+    </div>
+
+    <!-- ── HERO ────────────────────────────────────── -->
+    <section class="hero">
+        <div class="hero-atmosphere"></div>
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-body">
+            <p class="hero-eyebrow">Retiro de Autoconhecimento · Brasil</p>
+            <h1 class="hero-title">VIPAX</h1>
+            <div class="hero-ornament">
+                <span class="hero-ornament-line"></span>
+                <span class="hero-ornament-diamond"></span>
+                <span class="hero-ornament-line"></span>
+            </div>
+            <p class="hero-subtitle">
+                Autoconhecimento que se constrói<br>com as próprias mãos
+            </p>
+        </div>
+        <div class="hero-scroll">
+            <span class="hero-scroll-label">Explorar</span>
+            <span class="hero-scroll-line"></span>
+        </div>
+    </section>
+
+    <!-- Divisor orgânico -->
+    <svg class="wave-divider" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="background:var(--deep);">
+        <path d="M0,40 C240,60 480,20 720,38 C960,56 1200,22 1440,42 L1440,60 L0,60 Z" fill="#0b1509"/>
+    </svg>
+
+    <!-- ── MANIFESTO ─────────────────────────────── -->
+    <section class="manifesto" id="manifesto">
+        <span class="manifesto-bg-char" aria-hidden="true">&ldquo;</span>
+        <div class="manifesto-inner">
+            <p class="pill-label reveal">O Encontro</p>
+            <p class="manifesto-quote reveal d1">
+                No VIPAX, o <mark>silêncio da natureza</mark> encontra o movimento das mãos.
+                O autoconhecimento não é apenas pensado —
+                é <mark>vivido, sentido e construído</mark>.
+                Entre trilhas cercadas de verde, o som constante da água corrente
+                e a energia das cachoeiras, você desacelera o ritmo externo
+                para ouvir o que realmente importa por dentro.
+            </p>
+        </div>
+    </section>
+
+    <!-- Divisor orgânico -->
+    <svg class="wave-divider" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="background:var(--dark);">
+        <path d="M0,25 C360,55 720,10 1080,35 C1260,47 1380,28 1440,20 L1440,60 L0,60 Z" fill="#121f10"/>
+    </svg>
+
+    <!-- ── VIVÊNCIAS ─────────────────────────────── -->
+    <section class="offerings" id="offerings">
+        <div class="section-head">
+            <p class="section-kicker reveal">O que você encontra</p>
+            <h2 class="section-h2 reveal d1">Cinco portas para o encontro com você</h2>
+        </div>
+        <div class="cards-grid">
+            <article class="card reveal d1">
+                <p class="card-num">01 —</p>
+                <h3 class="card-title">Meditações Guiadas</h3>
+                <p class="card-desc">Práticas conduzidas em meio à natureza para aprofundar a presença e abrir espaço para o silêncio interior — onde cada respiração é um reencontro com a própria essência.</p>
+            </article>
+            <article class="card reveal d2">
+                <p class="card-num">02 —</p>
+                <h3 class="card-title">Trilhas Conscientes</h3>
+                <p class="card-desc">Cada passo é um convite à presença. Caminhadas com pausas para contemplação, escuta do ambiente e reconexão com o ritmo natural do corpo e do entorno — o verde, o vento, o chão sob os pés.</p>
+            </article>
+            <article class="card reveal d3">
+                <p class="card-num">03 —</p>
+                <h3 class="card-title">Vivências com Madeira e Bambu</h3>
+                <p class="card-desc">Ao transformar matéria-prima em forma, desenvolvem-se foco, paciência e presença. O toque natural dos materiais desperta sentidos adormecidos pela rotina.</p>
+            </article>
+            <article class="card reveal d4">
+                <p class="card-num">04 —</p>
+                <h3 class="card-title">Banhos de Cachoeira</h3>
+                <p class="card-desc">A renovação que só a água viva de uma cachoeira pode oferecer — corpo e mente lavados pela força e frescor da natureza em estado puro.</p>
+            </article>
+            <article class="card reveal d5">
+                <p class="card-num">05 —</p>
+                <h3 class="card-title">Espaços de Silêncio</h3>
+                <p class="card-desc">Ambientes de introspecção criados para a reconexão interior, ideais para quem busca silêncio verdadeiro — longe do ruído, de volta a si mesmo.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Divisor orgânico -->
+    <svg class="wave-divider" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="background:var(--mid);">
+        <path d="M0,45 C200,20 500,55 800,30 C1100,8 1300,45 1440,38 L1440,60 L0,60 Z" fill="#0b1509"/>
+    </svg>
+
+    <!-- ── A EXPERIÊNCIA ──────────────────────────── -->
+    <section class="immersion" id="immersion">
+        <div class="immersion-inner">
+            <div class="immersion-sticky">
+                <p class="pill-label reveal">A Experiência</p>
+                <h2 class="immersion-heading reveal d1">
+                    Mais do que<br>um retiro —
+                    <em>uma transformação prática</em>
+                </h2>
+            </div>
+            <div class="immersion-text">
+                <p class="reveal">
+                    <strong>A natureza não é cenário: é participante ativa.</strong>
+                    O verde, a água, o vento e a terra são guias silenciosos
+                    que acompanham cada momento da jornada — e que falam
+                    com uma clareza que as palavras raramente alcançam.
+                </p>
+                <div class="hr-amber reveal d1"></div>
+                <p class="reveal d1">
+                    Os trabalhos manuais com madeira e bambu fazem parte
+                    desta jornada de uma forma única. Ao transformar matéria-prima
+                    em forma, <strong>você cria algo dentro de si enquanto cria com as mãos.</strong>
+                    O cheiro da madeira, o ritmo das ferramentas e o toque dos materiais
+                    naturais despertam sentidos muitas vezes esquecidos.
+                </p>
+                <p class="reveal d2">
+                    No VIPAX, <strong>o autoconhecimento deixa de ser conceito</strong>
+                    e se torna experiência. É o encontro entre mundo interno e
+                    movimento das mãos — onde a presença não se aprende,
+                    se vive.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── PULLQUOTE ──────────────────────────────── -->
+    <section class="pullquote">
+        <div class="pullquote-inner">
+            <span class="pullquote-mark reveal" aria-hidden="true">&ldquo;</span>
+            <p class="pullquote-text reveal d1">
+                O toque natural dos materiais, o cheiro da madeira e o ritmo
+                das ferramentas despertam sentidos muitas vezes esquecidos
+                pela rotina acelerada.
+            </p>
+            <p class="pullquote-author reveal d2">VIPAX · Retiro de Autoconhecimento</p>
+        </div>
+    </section>
+
+    <!-- ── CTA ───────────────────────────────────── -->
+    <section class="cta-section" id="cta">
+        <div class="cta-inner">
+            <div class="cta-taglines reveal">
+                <span class="bold">Construa com as mãos.</span>
+                <span class="accent">Acalme a mente.</span>
+                <span>Redescubra quem você é.</span>
+            </div>
+            <div class="cta-btn-wrap reveal d2">
+                <a href="#" class="btn-primary"><span>Quero Participar</span></a>
+                <a href="#manifesto" class="btn-ghost"><span>Saiba Mais</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FOOTER ────────────────────────────────── -->
+    <footer>
+        <span class="footer-logo">VIPAX</span>
+        <nav class="footer-center">
+            <a href="#manifesto">Proposta</a>
+            <a href="#offerings">Vivências</a>
+            <a href="#cta">Contato</a>
+        </nav>
+        <p class="footer-copy">© 2025 VIPAX · Retiro de Autoconhecimento</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/cursor.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/reveal.js"></script>
+    <script src="js/parallax.js"></script>
+
+</body>
+</html>

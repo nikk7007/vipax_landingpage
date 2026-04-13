@@ -1,0 +1,52 @@
+/* ─────────────────────────────────────────
+   VIPAX · Pullquote
+   Citação destacada centralizada com aspas
+   decorativas em tamanho monumental
+───────────────────────────────────────── */
+
+.pullquote {
+    background: var(--mid);
+    padding: 6rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.pullquote::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(200,150,62,0.04) 0%, transparent 70%);
+}
+
+.pullquote-inner {
+    position: relative;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.pullquote-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 7rem;
+    line-height: 0.6;
+    color: rgba(200,150,62,0.18);
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.pullquote-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--cream);
+}
+
+.pullquote-author {
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-top: 2rem;
+}

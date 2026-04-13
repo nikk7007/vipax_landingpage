@@ -1,0 +1,43 @@
+/* ─────────────────────────────────────────
+   VIPAX · Footer
+   Rodapé mínimo: logo, links centrais, copyright
+───────────────────────────────────────── */
+
+footer {
+    background: var(--deep);
+    border-top: 1px solid var(--amber-12);
+    padding: 2.5rem 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.4em;
+    color: var(--cream);
+}
+
+.footer-center {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-center a {
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(240,232,208,0.3);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-center a:hover { color: var(--cream-70); }
+
+.footer-copy {
+    font-size: 0.7rem;
+    color: rgba(240,232,208,0.25);
+    letter-spacing: 0.05em;
+}

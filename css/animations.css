@@ -1,0 +1,50 @@
+/* ─────────────────────────────────────────
+   VIPAX · Animações
+   Keyframes do hero + classes de scroll reveal
+───────────────────────────────────────── */
+
+/* ── Keyframes ─────────────────────────── */
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Título principal: emerge com blur e scale */
+@keyframes titleBloom {
+    from { opacity: 0; transform: translateY(35px) scale(0.97); filter: blur(10px); }
+    to   { opacity: 1; transform: translateY(0)    scale(1);    filter: blur(0); }
+}
+
+/* Linha de scroll: pulsa suavemente */
+@keyframes breathLine {
+    0%,100% { transform: scaleY(1);    opacity: 0.65; }
+    50%      { transform: scaleY(1.25); opacity: 1; }
+}
+
+/* ── Scroll Reveal ─────────────────────── */
+
+/* Estado inicial: oculto e deslocado para baixo */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.95s ease, transform 0.95s cubic-bezier(0.16,1,0.3,1);
+}
+
+/* Estado visível: ativado por JS via IntersectionObserver */
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Delays em cascata para revelar elementos em sequência */
+.d1 { transition-delay: 0.1s; }
+.d2 { transition-delay: 0.2s; }
+.d3 { transition-delay: 0.3s; }
+.d4 { transition-delay: 0.4s; }
+.d5 { transition-delay: 0.5s; }

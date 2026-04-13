@@ -1,0 +1,50 @@
+/* ─────────────────────────────────────────
+   VIPAX · Responsividade
+   Breakpoints: 960px (tablet/mobile)
+───────────────────────────────────────── */
+
+@media (max-width: 960px) {
+
+    /* ── Nav ──────────────────────────────── */
+    #main-nav          { padding: 1.3rem 1.8rem; }
+    #main-nav.scrolled { padding: 0.9rem 1.8rem; }
+    .nav-links         { display: none; }
+
+    /* ── Hero ─────────────────────────────── */
+    .hero-body        { text-align: center; }
+    .hero-title       { letter-spacing: 0.12em; }
+
+    /* ── Manifesto ────────────────────────── */
+    .manifesto-inner  { text-align: center; }
+    .pill-label       { justify-content: center; }
+    .manifesto-quote  { text-align: center; }
+
+    /* ── Offerings ────────────────────────── */
+    .section-head          { text-align: center; }
+    .cards-grid            { grid-template-columns: 1fr; }
+    .card:nth-child(n)     { grid-column: span 1; }
+    .card                  { text-align: center; }
+
+    /* ── Immersion ────────────────────────── */
+    .immersion-inner   { grid-template-columns: 1fr; gap: 3rem; }
+    .immersion-sticky  { position: static; text-align: center; }
+    .immersion-heading { text-align: center; }
+    .immersion-text p  { text-align: center; }
+
+    /* ── Pullquote ────────────────────────── */
+    .pullquote-inner  { text-align: center; }
+
+    /* ── CTA ──────────────────────────────── */
+    .cta-inner        { text-align: center; }
+    .cta-btn-wrap     { justify-content: center; }
+
+    /* ── Footer ───────────────────────────── */
+    footer            { flex-direction: column; gap: 1.2rem; text-align: center; }
+    .footer-center    { justify-content: center; }
+
+    /* ── Padding reduzido ─────────────────── */
+    .manifesto    { padding: 6rem 1.5rem; }
+    .offerings    { padding: 5rem 1.5rem 7rem; }
+    .immersion    { padding: 6rem 1.5rem; }
+    .cta-section  { padding: 7rem 1.5rem; }
+}

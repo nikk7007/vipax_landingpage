@@ -1,0 +1,62 @@
+/* ─────────────────────────────────────────
+   VIPAX · Navegação
+   Topo fixo, transparente → escura ao rolar
+───────────────────────────────────────── */
+
+#main-nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 600;
+    padding: 1.8rem 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.5s ease, padding 0.5s ease, border-color 0.5s ease;
+    border-bottom: 1px solid transparent;
+}
+
+#main-nav.scrolled {
+    background: rgba(6,13,7,0.92);
+    backdrop-filter: blur(14px);
+    padding: 1.1rem 3.5rem;
+    border-bottom-color: var(--amber-12);
+}
+
+.nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--cream);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    font-family: 'Lora', serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cream-70);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px; left: 0;
+    width: 0; height: 1px;
+    background: var(--amber);
+    transition: width 0.35s ease;
+}
+
+.nav-links a:hover { color: var(--cream); }
+.nav-links a:hover::after { width: 100%; }

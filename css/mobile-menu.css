@@ -1,0 +1,121 @@
+/* ─────────────────────────────────────────
+   VIPAX · Menu Mobile
+   Botão hamburger + overlay full-screen
+   Visível apenas em telas ≤ 960px
+───────────────────────────────────────── */
+
+/* ── Botão hamburger ────────────────────── */
+#nav-toggle {
+    display: none;           /* oculto no desktop */
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    background: none;
+    border: none;
+    cursor: none;
+    padding: 4px;
+    z-index: 600;
+    position: relative;
+}
+
+#nav-toggle span {
+    display: block;
+    height: 1px;
+    background: var(--cream);
+    transform-origin: center;
+    transition: transform 0.35s cubic-bezier(0.16,1,0.3,1),
+                opacity   0.25s ease,
+                width     0.35s ease;
+}
+
+#nav-toggle span:nth-child(1) { width: 100%; }
+#nav-toggle span:nth-child(2) { width: 70%; }
+#nav-toggle span:nth-child(3) { width: 85%; }
+
+/* Estado aberto: transforma em × */
+#nav-toggle.open span:nth-child(1) {
+    width: 100%;
+    transform: translateY(6px) rotate(45deg);
+}
+#nav-toggle.open span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-6px);
+}
+#nav-toggle.open span:nth-child(3) {
+    width: 100%;
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* ── Overlay full-screen ────────────────── */
+#mobile-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 550;
+    background: rgba(6,13,7,0.97);
+    backdrop-filter: blur(16px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    /* Estado inicial: fechado */
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-12px);
+    transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+
+#mobile-menu.open {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+}
+
+/* Links do menu mobile */
+#mobile-menu a {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 8vw, 3.2rem);
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    color: var(--cream-70);
+    text-decoration: none;
+    line-height: 1.6;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+#mobile-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 2px; left: 0;
+    width: 0; height: 1px;
+    background: var(--amber);
+    transition: width 0.4s ease;
+}
+
+#mobile-menu a:hover       { color: var(--cream); }
+#mobile-menu a:hover::after { width: 100%; }
+
+/* Detalhe decorativo no fundo do overlay */
+#mobile-menu::after {
+    content: 'VIPAX';
+    position: absolute;
+    bottom: -0.15em; left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38vw;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: rgba(200,150,62,0.03);
+    pointer-events: none;
+    user-select: none;
+    line-height: 1;
+}
+
+/* ── Mostrar hamburger em mobile ────────── */
+@media (max-width: 960px) {
+    #nav-toggle { display: flex; }
+}

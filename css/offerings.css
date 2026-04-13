@@ -1,0 +1,112 @@
+/* ─────────────────────────────────────────
+   VIPAX · Vivências (Offerings)
+   Grid editorial assimétrico 12 colunas,
+   cards com hover de borda âmbar e luz
+───────────────────────────────────────── */
+
+.offerings {
+    background: var(--mid);
+    padding: 7rem 2rem 9rem;
+    position: relative;
+}
+
+/* Cabeçalho de seção reutilizável */
+.section-head {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.section-kicker {
+    font-size: 0.68rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 1.2rem;
+}
+
+.section-h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.9rem, 4.5vw, 3.2rem);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--cream);
+    line-height: 1.2;
+}
+
+/* Grid de 12 colunas — layout editorial */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tamanhos assimétricos: primeira linha 5+7, segunda linha 4+4+4 */
+.card:nth-child(1) { grid-column: span 5; }
+.card:nth-child(2) { grid-column: span 7; }
+.card:nth-child(3) { grid-column: span 4; }
+.card:nth-child(4) { grid-column: span 4; }
+.card:nth-child(5) { grid-column: span 4; }
+
+.card {
+    background: var(--deep);
+    border: 1px solid var(--amber-12);
+    padding: 2.8rem 2.4rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.4s ease, transform 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+
+/* Gradiente de luz no hover */
+.card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--amber-06) 0%, transparent 55%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Linha de luz no topo do card no hover */
+.card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--amber), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.card:hover {
+    border-color: rgba(200,150,62,0.4);
+    transform: translateY(-4px);
+}
+
+.card:hover::before,
+.card:hover::after { opacity: 1; }
+
+.card-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.22em;
+    color: var(--amber);
+    margin-bottom: 1.4rem;
+    opacity: 0.75;
+}
+
+.card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 1rem;
+    line-height: 1.25;
+}
+
+.card-desc {
+    font-size: 0.87rem;
+    line-height: 1.75;
+    color: var(--cream-70);
+}
