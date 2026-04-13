@@ -1,2 +1,2 @@
 # VIPAX
-[PREVIEW](https://nikk700789.github.com/vipax_landingpage)
+[PREVIEW](https://nikk7007.github.io/vipax_landingpage/)
